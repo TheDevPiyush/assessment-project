@@ -1,0 +1,264 @@
+.container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.headerRight {
+    display: flex;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.walletInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.walletLabel {
+    color: #6b7280;
+}
+
+.walletAddress {
+    font-family: monospace;
+    color: #0ea5e9;
+    background-color: #f0f9ff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.connectButton {
+    background-color: #0ea5e9;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.connectButton:hover {
+    background-color: #0284c7;
+    transform: scale(1.05);
+}
+
+.backButton {
+    background-color: #0ea5e9;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.backButton:hover {
+    background-color: #0284c7;
+    transform: scale(1.05);
+}
+
+.connectPrompt {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.connectPrompt h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.connectPrompt p {
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.gamesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gameCard {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.gameCard:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.gameInfo h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.timestamp {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.statusWon {
+    color: #059669;
+}
+
+.statusLost {
+    color: #dc2626;
+}
+
+.statusPending {
+    color: #6b7280;
+}
+
+.gameDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    color: #4b5563;
+}
+
+.value {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.emptyState h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+    color: #6b7280;
+}
+
+.loadingSpinner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid #e5e7eb;
+    border-top-color: #0ea5e9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.errorContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorContent {
+    text-align: center;
+    color: #dc2626;
+}
+
+.errorContent h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 0 0.75rem;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .gamesGrid {
+        grid-template-columns: 1fr;
+    }
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    .headerRight {
+        width: 100%;
+    }
+    .connectButton,
+    .backButton {
+        width: 100%;
+    }
+}
